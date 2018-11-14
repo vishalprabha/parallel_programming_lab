@@ -4,22 +4,23 @@
 void main() {
 	int i,j,k;
 	int a[4][3],b[3][4],c[4][4];
-	#pragma omp parallel for num_threads(4)
+	omp_set_num_threads(4);
+	#pragma omp parallel for 
 	for(i=0;i<4;i++)
 	    for(j=0;j<3;j++)
 	        a[i][j] = i + j;
 	
-	#pragma omp parallel for num_threads(4)
+	#pragma omp parallel for 
 	for(i=0;i<3;i++)
 	    for(j=0;j<4;j++)
 	        b[i][j] = i * j;        
 	        
-	#pragma omp parallel for num_threads(4)
+	#pragma omp parallel for 
 	for(i=0;i<4;i++)
 	    for(j=0;j<4;j++)
 	        c[i][j] = 0; 
 
-	#pragma omp parallel for num_threads(4)
+	#pragma omp parallel for 
 	for(i=0;i<4;i++) {
 	    printf("Thread %d did row %d\n",omp_get_thread_num(),i);
 	    for(j=0;j<4;j++)
