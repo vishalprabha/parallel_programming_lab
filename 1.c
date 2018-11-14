@@ -12,6 +12,7 @@ void main() {
         int x;
         #pragma omp sections
         {
+        	#pragma omp section
         	{
         	    printf("%d \n",omp_get_thread_num());
         	    for(x=0;x<10;x++) {
