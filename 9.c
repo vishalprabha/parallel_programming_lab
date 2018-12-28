@@ -3,8 +3,9 @@
 
 void main() {
     int i;
-	#pragma omp parallel for num_threads(8)
+  #pragma omp parallel for ordered
 	for(i = 97; i<=122; i++)
+  #pragma omp ordered
 	    printf("%c",i);
     printf("\n");
 }

@@ -1,0 +1,7 @@
+$ mpicc mpi_processor_rank.c -o mpi_processor_rank
+$ mpirun -np 4 ./mpi_processor_rank
+Hello world: rank 0 of 4
+Hello world: rank 1 of 4
+Hello world: rank 2 of 4
+Hello world: rank 3 of 4
+That is all for now!

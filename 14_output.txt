@@ -1,0 +1,10 @@
+$ mpicc -o mpi_approx_pi mpi_approx_pi.c
+$ mpirun -np 4 ./mpi_approx_pi
+This is Process-0/4 running on localhost.localdomain 
+This is Process-3/4 running on localhost.localdomain 
+This is Process-1/4 running on localhost.localdomain 
+This is Process-2/4 running on localhost.localdomain 
+This program uses 4 processes
+The number of intervals = 100000 
+pi is approximately 3.1415926535981167, Error is 0.0000000000083236
+wall clock time = 0.020268
